@@ -7,9 +7,8 @@ class Solution {
 public:
     int missingNumber(vector<int>& nums) {
         int n = nums.size();
-        int flag = 0;
         for (int i = 0; i <= n; i++) {
-            flag = 0;  // Reset flag for each number
+            int flag = 0;  // Reset flag for each number
             for (int j = 0; j < n; j++) {
                 if (nums[j] == i) {
                     flag = 1;
@@ -25,8 +24,25 @@ public:
 };
 */
 
+/*  better time:O(n logn)  space:O(n)
+class Solution {
+    public:
+    int missingNumber(vector<int>& nums) {
+        int n = nums.size();
+        sort(nums.begin(), nums.end());
 
-/*  better time:O(n)  space:O(n)
+        for (int i = 0; i < n; i++) {
+            if (nums[i] != i) {
+                return i;
+            }
+        }
+        return n;  
+    }
+};
+*/
+
+
+/*  better 2 : time:O(n)  space:O(n)
 class Solution {
 public:
     int missingNumber(vector<int>& nums) {

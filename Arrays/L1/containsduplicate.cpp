@@ -45,7 +45,7 @@ int main()
     cout << "Enter the number of elements: " << endl;
     cin >> n;
 
-    vector<int> nums(n); // Resizing the vector to hold n elements
+    vector<int> nums(n); 
 
     cout << "Enter the elements: " << endl;
     for (int i = 0; i < n; i++)

@@ -1,6 +1,30 @@
 #include <bits/stdc++.h>
-
 using namespace std;
+
+/*
+class Solution {
+public:
+    int findLengthOfLCIS(vector<int>& nums) {
+        int n = nums.size();
+
+        int maxLen = 1;
+        
+        for(int i =0; i<n; i++){
+            int len = 1;
+            for(int j = i+1; j<n; j++){
+                if(nums[j] > nums[j-1]){
+                    len++;
+                }
+                else{
+                    break;
+                }
+            }
+            maxLen = max(maxLen, len);
+        }
+        return maxLen;
+    }
+};
+*/
 
 class Solution{
     public:

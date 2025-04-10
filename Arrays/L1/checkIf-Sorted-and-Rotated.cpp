@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/*
+/* TC:O(n*n) SC:O(n)
 class Solution {
 public:
     bool check(vector<int>& nums) {
@@ -31,6 +31,7 @@ public:
 };
 */
 
+// TC:O(n) SC:O(1)
 class Solution {
 public:
     bool check(int arr[], int n) {

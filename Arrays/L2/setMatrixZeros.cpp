@@ -46,6 +46,7 @@ public:
 };
 */
 
+/*  TC :O(m*n)  SC:O(m) + O(n)
 class Solution{
     public:
     void zeroMatrix(vector<vector<int>>& matrix) {
@@ -73,6 +74,7 @@ class Solution{
         }
     }
 };
+*/
 
 class Solution {
     public:
