@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+// TC:O(2^n)
 int fibonacci(int n) {
     // Base case: fibonacci(0) = 0 and fibonacci(1) = 1
     if (n <= 1) return n;
