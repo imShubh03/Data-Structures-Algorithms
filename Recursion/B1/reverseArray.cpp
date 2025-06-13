@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+// TC: O(n)  swaps are n/2   SC:O(n) recursive stack space
 void reverseArray(int arr[], int start, int end) {
     if (start >= end) return;  // Base case: if start meets or exceeds end, return
     swap(arr[start], arr[end]);  // Swap the elements at start and end

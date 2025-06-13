@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/*app 1 : brute : time:O(2^(2n) *n) space:O(2n)
+/*app 1 : brute : time:O(2^(2n) * 2n) space:O(2n)
 class Solution {
 public:
     bool isValid(string &str){

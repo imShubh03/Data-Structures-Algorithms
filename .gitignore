@@ -1,0 +1,6 @@
+# Ignore VSCode settings
+.vscode/
+
+# Ignore all build/output files recursively
+**/output/
+**/*.exe

@@ -1,41 +1,48 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// TC : O(n 2^n) (loop*no of recurcall)  SC:O(n)
-class Solution{
-    public:
-    void printSubSets(int index, vector<int>&ans, int arr[], int n){
-        //base case 
-        if(index ==n){
-            for(auto it:ans){
-                cout<<it<<" ";
-            }
-            if(ans.empty()){
-                cout<<"[]";
-            }
-            cout<<endl;
+// TC : O(n 2^n) (loop*no of recur call)  SC:O(n)
+class Solution {
+public:
+    void generate(vector<vector<int>>& res, vector<int>& temp, vector<int>& nums, int index) {
+        if(index == nums.size()) {
+            if(!temp.empty()) res.push_back(temp);
             return;
         }
 
-        //pick the index
-        ans.push_back(arr[index]);
-        printSubSets(index+1,ans,arr,n);
-        ans.pop_back();
+        temp.push_back(nums[index]);
+        generate(res, temp, nums, index + 1);
+        temp.pop_back();
 
-        //not pick the elem
-        printSubSets(index+1,ans,arr,n);
+        generate(res, temp, nums, index + 1);
     }
 
+    vector<vector<int>> subsets(vector<int>& nums) {
+        vector<vector<int>> res;
+        vector<int> temp;
+        generate(res, temp, nums, 0);
+        return res;
+    }
 };
 
 int main() {
-    int arr[] ={3,1,2};
-    int n = 3;
+    int n;
+    cin >> n;
+    vector<int> nums(n);
+    
+    for(int i = 0; i < n; i++) {
+        cin >> nums[i];
+    }
 
-    vector<int>ans;
+    Solution obj;
+    vector<vector<int>> res = obj.subsets(nums);
 
-    Solution sol;
-    sol.printSubSets(0,ans,arr,n);
+    for(auto &subset : res) {
+        for(int val : subset) {
+            cout << val << " ";
+        }
+        cout << endl;
+    }
 
     return 0;
 }
