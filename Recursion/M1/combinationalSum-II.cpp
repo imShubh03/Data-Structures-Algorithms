@@ -1,9 +1,39 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
-
+#include<bits/stdc++.h>
 using namespace std;
 
+/* Brute TC:O(2^k * k logn) no if subset, ds into anot ds , set oper  SC: O(2^n * n) +O(n)+ O(n)
+class Solution {
+public:
+    void generateAllSubsets(int i, vector<int>& arr, vector<int>& ds, set<vector<int>>& result, int target) {
+        if (i == arr.size()) {
+            int sum = accumulate(ds.begin(), ds.end(), 0);
+            if (sum == target) {
+                vector<int> temp = ds;
+                sort(temp.begin(), temp.end());
+                result.insert(temp);
+            }
+            return;
+        }
+
+        // include
+        ds.push_back(arr[i]);
+        generateAllSubsets(i + 1, arr, ds, result, target);
+        ds.pop_back();
+
+        // exclude
+        generateAllSubsets(i + 1, arr, ds, result, target);
+    }
+
+    vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
+        set<vector<int>> resultSet;
+        vector<int> ds;
+
+        generateAllSubsets(0, candidates, ds, resultSet, target);
+
+        return vector<vector<int>>(resultSet.begin(), resultSet.end());
+    }
+};
+*/
 class Solution {
 public:
     void findcombi(vector<int>& arr, int target, int index, vector<vector<int>>& ans, vector<int>& ds) {

@@ -1,6 +1,34 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+/*
+// TC: O(2^n * n), SC: O(2^n * n)
+class Solution {
+public:
+    void generate(int index, vector<int>& arr, int n, vector<int>& temp, vector<vector<int>>& powerset) {
+        if(index == n) {
+            powerset.push_back(temp);
+            return;
+        }
+
+        // Include current element
+        temp.push_back(arr[index]);
+        generate(index + 1, arr, n, temp, powerset);
+
+        // Exclude current element
+        temp.pop_back();
+        generate(index + 1, arr, n, temp, powerset);
+    }
+
+    vector<vector<int>> getPowerset(vector<int>& arr, int n) {
+        vector<vector<int>> powerset;
+        vector<int> temp;
+        generate(0, arr, n, temp, powerset);
+        return powerset;
+    }
+};
+*/
+//TC O(2^n) +O(2^n logn)   SC:O(2^n) + O(n)
 class Solution {
     public:
     // Function to find all subset sums

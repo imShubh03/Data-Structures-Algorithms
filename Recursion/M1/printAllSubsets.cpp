@@ -6,7 +6,9 @@ class Solution {
 public:
     void generate(vector<vector<int>>& res, vector<int>& temp, vector<int>& nums, int index) {
         if(index == nums.size()) {
-            if(!temp.empty()) res.push_back(temp);
+            if(!temp.empty()){ // this is only when [] not allowed
+                res.push_back(temp);
+            } 
             return;
         }
 

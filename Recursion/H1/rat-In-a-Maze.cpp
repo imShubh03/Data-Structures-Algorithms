@@ -8,7 +8,7 @@ private:
     void solve(int i, int j, vector<vector<int>>& mat, int n, vector<string>& ans, string path, vector<vector<int>>& vis) {
         // Base case: If the destination (bottom-right corner) is reached
         if (i == n - 1 && j == n - 1) {
-            ans.push_back(path);  // Add the current path to the list of answers
+            ans.push_back(path);  
             return;
         }
 

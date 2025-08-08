@@ -1,14 +1,14 @@
-#include <iostream>
-#include <vector>
-#include <string>
+#include<bits/stdc++.h> 
 using namespace std;
 
+/* TC:O(n * n!)  SC: O(n^2)
 class Solution {
 private:
     bool isSafe(int row, int col, vector<string>& board, int n) {
         int duprow = row;
         int dupcol = col;
 
+        // we only check for 3 directions 
         // Check for upper back diagonal
         while (row >= 0 && col >= 0) {
             if (board[row][col] == 'Q') return false;
@@ -61,10 +61,48 @@ public:
         return ans;
     }
 };
+*/
+
+
+class Solution {
+public:
+    void solve(int col, vector<string>& board, vector<vector<string>>& res, vector<int>& leftRow, vector<int>& upperD, vector<int>& lowerD, int n) {
+        if (col == n) {
+            res.push_back(board);
+            return;
+        }
+
+        for (int row = 0; row < n; row++) {
+            if (leftRow[row] == 0 && upperD[n - 1 + col - row] == 0 && lowerD[row + col] == 0) {
+                board[row][col] = 'Q';
+                leftRow[row] = 1;
+                upperD[n - 1 + col - row] = 1;
+                lowerD[row + col] = 1;
+
+                // ✅ Corrected argument order here
+                solve(col + 1, board, res, leftRow, upperD, lowerD, n);
+
+                board[row][col] = '.';
+                leftRow[row] = 0;
+                upperD[n - 1 + col - row] = 0;
+                lowerD[row + col] = 0;
+            }
+        }
+    }
+
+    vector<vector<string>> solveNQueens(int n) {
+        vector<vector<string>> res;
+        vector<string> board(n, string(n, '.'));
+        vector<int> leftRow(n, 0), upperD(2 * n - 1, 0), lowerD(2 * n - 1, 0);
+        solve(0, board, res, leftRow, upperD, lowerD, n);
+        return res;
+    }
+};
+
 
 int main() {
     Solution sol;
-    int n = 4; // You can change the value of n to test different board sizes
+    int n = 4; 
     vector<vector<string>> solutions = sol.solveNQueens(n);
 
     cout << "Total number of solutions for " << n << "-Queens: " << solutions.size() << endl;

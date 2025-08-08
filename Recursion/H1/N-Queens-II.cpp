@@ -1,6 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <string>
+#include<bits/stdc++.h>
 using namespace std;
 
 class Solution {
@@ -64,7 +62,7 @@ public:
 
 int main() {
     Solution sol;
-    int n = 4; // You can change the value of n to test different board sizes
+    int n = 4; 
     int result = sol.totalNQueens(n);
 
     cout << "Total number of solutions for " << n << "-Queens: " << result << endl;
