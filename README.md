@@ -1,4 +1,30 @@
+# ![DSA Banner](https://skillsmartcode.com/wp-content/uploads/2024/10/Data-structures-and-algorithms.webp)
+
+<p align="center">
+	<img src="https://img.shields.io/github/stars/imShubh03/data-structures-algorithms?style=social" alt="GitHub stars"/>
+	<!-- <img src="https://img.shields.io/github/forks/imShubh03/data-structures-algorithms" alt="GitHub forks"/> -->
+	<img src="https://img.shields.io/github/license/imShubh03/data-structures-algorithms" alt="License"/>
+	<img src="https://img.shields.io/github/languages/top/imShubh03/data-structures-algorithms" alt="Top language"/>
+	<img src="https://img.shields.io/github/contributors/imShubh03/data-structures-algorithms" alt="Contributors"/>
+</p>
+
 # Data Structures and Algorithms
+
+<details>
+<summary>Table of Contents</summary>
+
+- [Data Structures and Algorithms](#data-structures-and-algorithms)
+  - [📚 Features](#-features)
+- [Why This Repository?](#why-this-repository)
+- [Complexity Analysis](#complexity-analysis)
+- [Quick Start](#quick-start)
+  - [🛠️ Installation](#️-installation)
+  - [🧭 Navigate to the desired directory and](#navigate-to-the-desired-directory-and)
+  - [📄 Usage](#-usage)
+- [🧑‍💻 Contributing](#-contributing)
+- [📧 Contact](#-contact)
+- [🎉 Acknowledgments](#-acknowledgments)
+</details>
 
 Welcome to the comprehensive repository of data structures and algorithms, primarily implemented in C++ with a bit of Java! 🚀📊 This repository aims to provide clear explanations, test cases, and solutions that range from naive brute force to highly optimized approaches.
 
@@ -8,6 +34,45 @@ Welcome to the comprehensive repository of data structures and algorithms, prima
 - **Multiple Approaches**: Solutions from naive brute force to optimized algorithms.
 - **Complete Examples**: Each implementation includes a full code example with a main function for easy testing.
 - **Detailed Explanations**: Clear explanations to help understand the concepts and implementations.
+
+# Why This Repository?
+
+This repository stands out by providing:
+- Multiple approaches for each problem (brute force to optimal)
+- Complexity for quick reference
+- Ready-to-run code with test cases
+- Beginner-friendly explanations
+
+Whether you’re preparing for interviews, learning DSA, or contributing, this repo is designed for clarity and depth.
+
+# Complexity Analysis
+
+| Algorithm                | Time Complexity | Space Complexity |
+|--------------------------|-----------------|-----------------|
+| Linear Search            | $O(n)$          | $O(1)$          |
+| Binary Search            | $O(\log n)$     | $O(1)$          |
+| Bubble Sort              | $O(n^2)$        | $O(1)$          |
+| Merge Sort               | $O(n \log n)$   | $O(n)$          |
+| Quick Sort               | $O(n \log n)$   | $O(\log n)$     |
+| ...                      | ...             | ...             |
+
+
+# Quick Start
+
+Clone the repository and run your first algorithm in seconds:
+
+```bash
+git clone https://github.com/imShubh03/data-structures-algorithms.git
+cd data-structures-algorithms
+g++ Arrays/L1/largesteleminarray.cpp -o largesteleminarray.exe
+./largesteleminarray.exe
+```
+
+For Java:
+```bash
+javac Arrays/L1/SomeAlgorithm.java
+java SomeAlgorithm
+```
 
 ## 🛠️ Installation
 
@@ -40,7 +105,7 @@ Contributions are welcome! If you have improvements, new algorithms, or bug fixe
 ## 📧 Contact
 For any questions or suggestions, you can reach out to me at :
 ```bash
-shubhamsonake307@gmail.com.
+shubh.sonake17@gmail.com
 ```
 
 ## 🎉 Acknowledgments
