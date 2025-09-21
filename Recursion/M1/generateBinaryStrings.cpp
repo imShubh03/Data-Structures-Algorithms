@@ -39,7 +39,7 @@ class Solution{
 };
 */
 
-// TC :O(n * valid strings)  SC :O(n * valid strings)
+// TC :O(n * valid strings) ie TC=O(N⋅f(N)) where f(N)=f(N−1)+f(N−2)  SC :O(n * valid strings)
 class Solution {
     public:
     void generate(vector<string>&res, string &temp, int N){

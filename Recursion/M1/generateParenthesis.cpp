@@ -40,13 +40,13 @@ public:
         string ans = "";
         vector<string> res;
         solve(ans, res, n);
-        return res; // Return the result vector containing valid parenthesis strings
+        return res; 
     }
 };
 */
 
 
-//approach 2  time:O(2^(2n)) space:O(2n)
+//approach 2 time:O(2^(2n)) space:O(2n)
 class Solution {
 public:
     void solve(string &ans, vector<string> &res, int n, int open, int close){
