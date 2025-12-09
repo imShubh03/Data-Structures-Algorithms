@@ -1,4 +1,3 @@
-# ![DSA Banner](https://skillsmartcode.com/wp-content/uploads/2024/10/Data-structures-and-algorithms.webp)
 
 <p align="center">
 	<img src="https://img.shields.io/github/stars/imShubh03/data-structures-algorithms?style=social" alt="GitHub stars"/>
@@ -14,16 +13,16 @@
 <summary>Table of Contents</summary>
 
 - [Data Structures and Algorithms](#data-structures-and-algorithms)
-  - [📚 Features](#-features)
+	- [📚 Features](#-features)
 - [Why This Repository?](#why-this-repository)
 - [Complexity Analysis](#complexity-analysis)
 - [Quick Start](#quick-start)
-  - [🛠️ Installation](#️-installation)
-  - [🧭 Navigate to the desired directory and](#navigate-to-the-desired-directory-and)
-  - [📄 Usage](#-usage)
-- [🧑‍💻 Contributing](#-contributing)
-- [📧 Contact](#-contact)
-- [🎉 Acknowledgments](#-acknowledgments)
+	- [🛠️ Installation](#️-installation)
+	- [🧭Navigate to the desired directory and](#navigate-to-the-desired-directory-and)
+	- [📄 Usage](#-usage)
+	- [🧑‍💻 Contributing](#-contributing)
+	- [📧 Contact](#-contact)
+	- [🎉 Acknowledgments](#-acknowledgments)
 </details>
 
 Welcome to the comprehensive repository of data structures and algorithms, primarily implemented in C++ with a bit of Java! 🚀📊 This repository aims to provide clear explanations, test cases, and solutions that range from naive brute force to highly optimized approaches.
