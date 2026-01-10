@@ -8,7 +8,7 @@ public:
         sort(nums.begin(), nums.end());
         int ans = -1; // Initialize ans to handle cases where no duplicate is found
         for (int i = 0; i < nums.size() - 1; i++) {
-            if (nums[i] == nums[i + 1]) { // Use '==' for comparison, not '='
+            if (nums[i] == nums[i + 1]) { 
                 ans = nums[i];
                 break; // Break loop as soon as duplicate is found
             }
@@ -51,7 +51,7 @@ public:
     int findDuplicate(vector<int>& nums) {
         // Initialize pointers directly with indices for faster convergence
         int slow = nums[0];
-        int fast = nums[0];
+        int fast = nums[0]; 
 
         // Iterate until a cycle is found
         do {

@@ -4,7 +4,7 @@
 
 using namespace std;
 
-/*
+/* TC:O(nlogn) SC:O(1)
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums){
@@ -21,16 +21,12 @@ public:
 };
 */
 
-class Solution
-{
+class Solution{
 public:
-    bool containsDuplicate(vector<int> &nums)
-    {
+    bool containsDuplicate(vector<int> &nums){
         unordered_set<int> seen;
-        for (int num : nums)
-        {
-            if (seen.find(num) != seen.end())
-            {
+        for (int num : nums){
+            if (seen.find(num) != seen.end()){
                 return true;
             }
             seen.insert(num);
