@@ -15,7 +15,8 @@ public:
             int end = intervals[i][1];
 
             // Skip already merged intervals
-            //ans = [1. 6]     - [4, 5]   6 > 5 skip
+            // [1,3] [2, 4] [2, 6]
+            //ans = [1, 6]     - [4, 5]   6 > 5 skip
             if (!ans.empty() && end <= ans.back()[1]) {
                 continue;
             }

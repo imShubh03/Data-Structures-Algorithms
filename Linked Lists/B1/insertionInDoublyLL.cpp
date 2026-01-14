@@ -22,16 +22,16 @@ class Node{
 };
 
 class Solution{
-    public://converting the given arr to LL
+    public:
     Node* convertArr2DLL(vector<int>&arr){
-        int n = arr.size();
-        //create a head
+        if (arr.empty()) return nullptr;
         Node* head = new Node(arr[0]);
-        Node* prev = head;
-        for(int i =1;i<n;i++){
-            Node* temp = new Node(arr[i],nullptr,prev);
-            prev -> next = temp;
-            prev = prev -> next;
+        Node* prevNode = head;
+        for (int i = 1; i < (int)arr.size(); ++i) {
+            Node* temp = new Node(arr[i]);
+            prevNode->next = temp;
+            temp->prev = prevNode;
+            prevNode = temp;
         }
         return head;
     }
@@ -48,8 +48,9 @@ class Solution{
 
     //insert at head
     Node* insertAtHead(Node* head, int val){
-        Node* newHead = new Node(val,head,nullptr);
-        head -> prev = newHead;
+        Node* newHead = new Node(val);
+        newHead->next = head;
+        if (head != nullptr) head->prev = newHead;
         return newHead;
     }
 

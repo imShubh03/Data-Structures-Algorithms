@@ -66,7 +66,7 @@ void insertEnd(Node*& head, int data) {
 int main() {
     Node* head = nullptr;
 
-    // Create a doubly linked list: 1 -> 2 -> 3 -> 2 -> 4 -> 2
+    // Create a doubly linked list: 1 <-> 2 <-> 3 <-> 2 <-> 4 <-> 2
     insertEnd(head, 1);
     insertEnd(head, 2);
     insertEnd(head, 3);

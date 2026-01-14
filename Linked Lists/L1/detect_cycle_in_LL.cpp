@@ -12,6 +12,25 @@ struct ListNode {
     }
 };
 
+/*
+// Brute Force (using a visited set)
+// Example implementation:
+//
+// class SolutionBrute {
+// public:
+//     bool hasCycle(ListNode* head) {
+//         unordered_set<ListNode*> seen;
+//         ListNode* cur = head;
+//         while (cur != nullptr) {
+//             if (seen.count(cur)) return true;
+//             seen.insert(cur);
+//             cur = cur->next;
+//         }
+//         return false;
+//     }
+// };
+*/
+
 class Solution {
 public:
     // Function to detect cycle in a linked list

@@ -17,6 +17,7 @@ class Solution{
     public:
     Node* convertArr2LL(vector<int>&arr){
         int n = arr.size();
+        if (n == 0) return nullptr;
         Node* head = new Node(arr[0]);
         Node* mover = head;
 
