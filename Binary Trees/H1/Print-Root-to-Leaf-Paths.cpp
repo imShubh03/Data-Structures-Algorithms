@@ -1,28 +1,34 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-struct Node{
+struct Node
+{
     int data;
     Node *left;
     Node *right;
-    Node(int val){
+    Node(int val)
+    {
         data = val;
         left = right = NULL;
     }
 };
 
-class Solution{
+class Solution
+{
 public:
-    void solve(Node *node, vector<int> &path, vector<vector<int>> &res){
+    void solve(Node *node, vector<int> &path, vector<vector<int>> &res)
+    {
         if (node == nullptr)
             return;
 
         path.push_back(node->data);
 
-        if (node->left == NULL && node->right == NULL){
+        if (node->left == NULL && node->right == NULL)
+        {
             res.push_back(path);
         }
-        else{
+        else
+        {
             solve(node->left, path, res);
             solve(node->right, path, res);
         }
@@ -30,7 +36,8 @@ public:
         path.pop_back(); // backtrack
     }
 
-    vector<vector<int>> Paths(Node *root){
+    vector<vector<int>> Paths(Node *root)
+    {
         vector<vector<int>> res;
         vector<int> path;
         solve(root, path, res);
@@ -38,7 +45,8 @@ public:
     }
 };
 
-int main(){
+int main()
+{
     Node *root = new Node(1);
     root->left = new Node(2);
     root->right = new Node(3);
@@ -50,8 +58,10 @@ int main(){
     Solution sol;
     vector<vector<int>> paths = sol.Paths(root);
 
-    for (auto path : paths){
-        for (int val : path){
+    for (auto path : paths)
+    {
+        for (int val : path)
+        {
             cout << val << " ";
         }
         cout << endl;

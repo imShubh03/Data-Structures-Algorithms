@@ -15,28 +15,26 @@ public:
 
 class Solution {
 public:
-    void levelOrderPrint(TreeNode* root) {
-        if (root == nullptr) return;
+    vector<vector<int>> levelOrderPrint(TreeNode* root) {
+        vector<vector<int>> result;
+        if (root == nullptr) return result;
 
         queue<TreeNode*> q;
         q.push(root);
 
         while (!q.empty()) {
             int size = q.size();
+            vector<int> level;
             for (int i = 0; i < size; i++) {
                 TreeNode* node = q.front();
                 q.pop();
-
-                // If left or right child exists, add to queue
+                level.push_back(node->data);
                 if (node->left != nullptr) q.push(node->left);
                 if (node->right != nullptr) q.push(node->right);
-
-                
-                // Print the current node's data
-                cout << node->data << " ";
             }
-            cout << endl; 
+            result.push_back(level);
         }
+        return result;
     }
 };
 
@@ -56,8 +54,15 @@ int main() {
     root->right->right = new TreeNode(7);
 
     Solution sol;
-    cout<<"the level order traversal is..."<<endl;
-    sol.levelOrderPrint(root);
+    auto levels = sol.levelOrderPrint(root);
+    
+    cout << "The level order traversal is..." << endl;
+    for (const auto& level : levels) {
+        for (int val : level) {
+            cout << val << " ";
+        }
+        cout << endl;
+    }
 
     return 0;
 }
